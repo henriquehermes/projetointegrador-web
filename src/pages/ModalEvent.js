@@ -14,7 +14,7 @@ import {
 
 import api from "../config/api";
 
-import "./styles.css"
+import "./styles.css";
 
 export default function Home({
   data,
@@ -45,10 +45,16 @@ export default function Home({
               disabled
               value={data?.message}
             />
+            <br />
+
             <Label>Latitude</Label>
             <Input disabled value={data?.lat} />
+            <br />
+
             <Label>Longitude</Label>
             <Input disabled value={data?.long} />
+            <br />
+
             <Label>Contato</Label>
             <Input
               disabled

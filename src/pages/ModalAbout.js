@@ -24,6 +24,7 @@ export default function Home({
       </ModalHeader>
       <ModalBody>
         <span className="TitleAbout">EU ENCONTREI</span>
+        <br />
           <p>
             Com o crescente número de moradores de
             rua nos últimos anos, vemos pouca ação
@@ -32,6 +33,7 @@ export default function Home({
             empresas privadas tomam atitudes mas
             sabemos que precisamos fazer mais.
           </p>
+          <br />
           <p>
             O projeto visa ajudar moradores de rua
             a serem localizados e receberem apoio

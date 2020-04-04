@@ -65,6 +65,7 @@ export default function Home({
               }
               value={message}
             />
+            <br />
 
             <Label>Latitude</Label>
             <Input
@@ -73,6 +74,7 @@ export default function Home({
                 setLat(event.target.value)
               }
             />
+            <br />
 
             <Label>Longitude</Label>
             <Input
@@ -81,6 +83,7 @@ export default function Home({
                 setLong(event.target.value)
               }
             />
+            <br />
 
             <Label>Contato</Label>
             <Input
