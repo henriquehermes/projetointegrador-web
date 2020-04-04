@@ -124,7 +124,7 @@ export default function Home() {
         <CenterFooter>
           <TitleAbout>Eu encontrei</TitleAbout>
           <SubFooter>
-            Criada por Henrique Hermes
+            Criada por Henrique Hermes 
           </SubFooter>
         </CenterFooter>
 
