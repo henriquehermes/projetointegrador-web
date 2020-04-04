@@ -3,19 +3,6 @@ import React, {
   useEffect,
 } from "react";
 
-import {
-  Container,
-  Header,
-  Title,
-  Footer,
-  Menu,
-  MenuButton,
-  ButtonText,
-  ButtonMark,
-  TitleAbout,
-  CenterFooter,
-  SubFooter,
-} from "./styles";
 import ReactMapGL, { Marker } from "react-map-gl";
 
 import api from "../config/api";
@@ -26,18 +13,19 @@ import ModalEvent from "./ModalEvent";
 import ModalCreateEvent from "./ModalCreateEvent";
 import ModalAbout from "./ModalAbout";
 
+import "./styles.css"
+
 const AnyReactComponent = ({
   openEvent,
-  data,
 }) => (
-  <ButtonMark onClick={openEvent}>
+  <div className="ButtonMark" onClick={openEvent}>
     <img
       src={MARK}
       width="30"
       height="30"
       alt="mark"
     />
-  </ButtonMark>
+  </div>
 );
 
 export default function Home() {
@@ -80,22 +68,32 @@ export default function Home() {
   }
 
   return (
-    <Container>
-      <Header>
-        <Title>EU ENCONTREI</Title>
-        <Menu>
-          <MenuButton onClick={handleModal}>
-            <ButtonText>Encontrei</ButtonText>
-          </MenuButton>
-          <MenuButton
+    <div>
+      <div className="Header">
+        <span className="Title">
+          EU ENCONTREI
+        </span>
+        <div className="Menu">
+          <button
+            className="MenuButton"
+            onClick={handleModal}
+          >
+            <span className="ButtonText">
+              Encontrei
+            </span>
+          </button>
+          <button
+            className="MenuButton"
             onClick={() =>
               setShowModalAbout(true)
             }
           >
-            <ButtonText>Sobre</ButtonText>
-          </MenuButton>
-        </Menu>
-      </Header>
+            <span className="ButtonText">
+              Sobre
+            </span>
+          </button>
+        </div>
+      </div>
 
       <ReactMapGL
         {...viewport}
@@ -120,15 +118,17 @@ export default function Home() {
           ))}
       </ReactMapGL>
 
-      <Footer>
-        <CenterFooter>
-          <TitleAbout>Eu encontrei</TitleAbout>
-          <SubFooter>
-            Criada por Henrique Hermes 
-          </SubFooter>
-        </CenterFooter>
+      <div className="Footer">
+        <div className="CenterFooter">
+          <span className="TitleAbout">
+            Eu encontrei
+          </span>
+          <span className="SubFooter">
+            Criada por Henrique Hermes
+          </span>
+        </div>
 
-        <CenterFooter>
+        <div className="CenterFooter">
           <a href="http://www.unisinos.br/">
             <img
               src={LOGO_UNISINOS}
@@ -137,8 +137,8 @@ export default function Home() {
               alt="logo_unisinos"
             />
           </a>
-        </CenterFooter>
-      </Footer>
+        </div>
+      </div>
 
       <ModalCreateEvent
         isVisible={isVisible}
@@ -156,6 +156,6 @@ export default function Home() {
           setShowModalAbout(null)
         }
       />
-    </Container>
+    </div>
   );
 }

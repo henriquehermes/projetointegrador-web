@@ -14,6 +14,8 @@ import {
 
 import api from "../config/api";
 
+import "./styles.css"
+
 export default function Home({
   data,
   handleModal,

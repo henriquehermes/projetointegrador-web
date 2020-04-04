@@ -8,7 +8,7 @@ import {
   ModalFooter,
 } from "reactstrap";
 
-import { TitleAbout } from "./styles";
+import "./styles.css"
 
 export default function Home({
   handleModal,
@@ -23,7 +23,7 @@ export default function Home({
         Sobre a plataforma
       </ModalHeader>
       <ModalBody>
-        <TitleAbout>EU ENCONTREI</TitleAbout>
+        <span className="TitleAbout">EU ENCONTREI</span>
           <p>
             Com o crescente número de moradores de
             rua nos últimos anos, vemos pouca ação
